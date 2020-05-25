@@ -20,7 +20,6 @@ $sql = "INSERT INTO users (username, password, acctype)
 VALUES ('$_POST[username]', '$_POST[password]', '$_POST[account]')";
   
 if ($db->query($sql) === TRUE) {
-  echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $db->error;
 }
