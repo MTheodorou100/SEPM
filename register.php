@@ -17,7 +17,7 @@ if ($db->connect_error) {
 }     
 
 $sql = "INSERT INTO users (username, password, acctype)
-VALUES ('John', 'Doe', 'admin')";
+VALUES ('$_POST[username]', '$_POST[password]', '$_POST[account]')";
   
 if ($db->query($sql) === TRUE) {
   echo "New record created successfully";
