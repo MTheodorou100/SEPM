@@ -15,8 +15,8 @@ if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }     
 
-$sql = "INSERT INTO locations (exhibitname, xcord, ycord, desc, min_duration)
-VALUES ('$_POST[Exhibit_name]', '$_POST[x]', '$_POST[y]', '$_POST[Description]','$_POST[min_duration]')";
+$sql = "INSERT INTO locations (exhibitname, xcord, ycord, min_duration, description)
+VALUES ('$_POST[Exhibit_name]', '$_POST[x]', '$_POST[y]', '$_POST[min_duration]', '$_POST[Description]')";
   
 if ($db->query($sql) === TRUE) {
 } else {
