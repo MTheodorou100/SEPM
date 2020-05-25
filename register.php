@@ -34,7 +34,7 @@ if ($db->query($sql) === TRUE) {
 #fclose($file);
 ?>
 	<h1>The user has been registered!</h1>
-	<p> <a href="http://titan.csit.rmit.edu.au/~s3722979/SEPM/">Click here</a> to return to main directory</p>
+	<p> <a href="home.html">Click here</a> to return to main directory</p>
 	
 </body>
 </html>
