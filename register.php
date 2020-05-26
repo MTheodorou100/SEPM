@@ -6,11 +6,11 @@
 	<link rel="stylesheet" href="../client/css.css">
 <body>  
 	<?php
-$servername = '35.244.69.181';
+$servername = '35.244.97.104';
 $dbname = 'SEPMdb';
-$dbUser = 'root';
-$dbPass = null;
-$db = new mysqli($servername, $dbUser, $dbPass, $dbname);
+$username = 'root';
+$password = null;
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
