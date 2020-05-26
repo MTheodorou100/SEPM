@@ -15,7 +15,7 @@ if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }     
 
-$sql = "UPDATE locations SET (exhibitname='$_POST[Exhibit_name]', xcord='$_POST[x]', ycord='$_POST[y]', min_duration='$_POST[min_duration]', description='$_POST[Description]') WHERE exhibitname='$_POST[editl]'";
+$sql = "UPDATE locations SET (exhibitname=$_POST[Exhibit_name], xcord=$_POST[x], ycord=$_POST[y], min_duration=$_POST[min_duration], description=$_POST[Description]) WHERE exhibitname=$_POST[editl]";
   
 if ($db->query($sql) === TRUE) {
 } else {
