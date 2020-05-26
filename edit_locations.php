@@ -42,7 +42,7 @@ $array = array();
     echo " - Name: " . $row["exhibitname"]. "<br>";
     $array =$row["exhibitname"];
     ?>
-        <option name='editl' id='editl' value="<?php echo $row["exhibitname"];?>"><?php echo $row["exhibitname"];?></option>
+        <option name="editl" id="editl" value="<?php echo $row["exhibitname"];?>"><?php echo $row["exhibitname"];?></option>
 <?php
   }
 } else {
