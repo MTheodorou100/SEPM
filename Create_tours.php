@@ -13,17 +13,18 @@ First location:  <select name="location" class="bl-select">
    
    
    $servername = '35.244.97.104';
-$dbname = 'SEPMdb';
-$dbUser = 'root';
-$dbPass = null;
-$db = new mysqli($servername, $dbUser, $dbPass, $dbname);
+    $dbname = 'SEPMdb';
+    $username = 'root';
+    $password = null;
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($db->connect_error) {
+
+if ($conn->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }     
 
 $sql = "SELECT exhibitname FROM locations";
-$result = $db->query($sql);  
+$result = $conn->query($sql);  
   
 $array = array();  
 #if ($db->query($sql) === TRUE) {
