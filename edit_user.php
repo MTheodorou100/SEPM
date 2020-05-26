@@ -33,7 +33,6 @@
                 <th>Username</th>
                 <th>Password</th>
                 <th>Account Type</th>
-                <th>Edit</th>
   <th>Delete</th>
             </tr>
         </thead>
@@ -47,7 +46,6 @@
                 <td class="password" id="password"><?php echo $contact['password']; ?></td>
                 <td class="acctype" id="acctype"><?php echo $contact['acctype']; ?></td>
                 <td class="edit-user">
-                <button onclick ="edit(this);">Edit</button></td>
                 <td class="contact-delete">
     <form action='delete.php?name="<?php echo $contact['username']; ?>"' method="post">
         <input type="hidden" name="username" value="<?php echo $contact['username']; ?>">
