@@ -18,12 +18,12 @@ First location:  <select name="location" class="bl-select">
     $password = null;
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($db->connect_error) {
+if ($conn->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }     
 
 $sql = "SELECT exhibitname FROM locations";
-$result = $db->query($sql);  
+$result = $conn->query($sql);  
   
 $array = array();  
 #if ($db->query($sql) === TRUE) {
