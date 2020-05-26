@@ -32,7 +32,7 @@
                 <th>User ID</th>
                 <th>Username</th>
                 <th>Password</th>
-                <th>Account Type</th>
+                <th>AccType</th>
                 <th>Delete</th>
             </tr>
         </thead>
