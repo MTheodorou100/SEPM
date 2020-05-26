@@ -11,5 +11,3 @@ if (!$conn){
 }
 //Define the query
 $query = mysqli_query($conn, "DELETE FROM users WHERE username='$_POST[username]' LIMIT 1");
-
-//sends the query to delete the entry
