@@ -41,13 +41,13 @@
 
         <?php while( $contact = mysqli_fetch_array( $contacts ) ) : ?>
 
-
-
             <tr>
-                <td class="userid"><?php echo $contact['idusers']; ?></td>
-                <td class="username"><?php echo $contact['username']; ?></td>
-                <td class="password"><?php echo $contact['password']; ?></td>
-                <td class="acctype"><?php echo $contact['acctype']; ?></td>
+                <td class="userid" id="userid"><?php echo $contact['idusers']; ?></td>
+                <td class="username" id="username-<?php echo $contact['username'];?>"><?php echo $contact['username']; ?></td>
+                <td class="password" id="password"><?php echo $contact['password']; ?></td>
+                <td class="acctype" id="acctype"><?php echo $contact['acctype']; ?></td>
+                <td class="edit-user">
+                <button onclick ="edit(this);">Edit</button></td>
                 <td class="contact-delete">
     <form action='delete.php?name="<?php echo $contact['username']; ?>"' method="post">
         <input type="hidden" name="username" value="<?php echo $contact['username']; ?>">
@@ -55,10 +55,33 @@
     </form>
 </td>                
             </tr>
+            
 
         <?php endwhile; ?>
 
         </tbody>
     </table>
+
+    <script>
+    function edit(button) {
+        var x = document.getElementById("username")
+        if (x.contentEditable == "true") {
+            x.contentEditable = "false";
+            button.innerHTML = "Edit";
+        } else {
+            x.contentEditable = "true";
+            button.innerHTML = "Save";
+        }
+        var y = document.getElementById("password")
+        if (y.contentEditable == "true") {
+            y.contentEditable = "false";
+            button.innerHTML = "Edit";
+        } else {
+            y.contentEditable = "true";
+            button.innerHTML = "Save";
+        }
+    }
+</script>
+    
 </body>
 </html> 
