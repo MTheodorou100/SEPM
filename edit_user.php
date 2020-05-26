@@ -33,10 +33,10 @@
     </select>
     <?php
     $conn2 = new mysqli($servername, $username, $password, $dbname);
-    $contacts = mysql_query($conn2, "SELECT * FROM users");
-    $result = mysql_query($contacts);
+    $contacts = mysqli_query($conn2, "SELECT * FROM users");
+   # $result = mysqli_query($contacts);
     // If results
-    if( mysql_num_rows( $result ) > 0 )
+    if( mysqli_num_rows( $contacts ) > 0 )
     ?>
 
     <table id="user-list">
@@ -51,7 +51,7 @@
         </thead>
         <tbody>
 
-        <?php while( $contact = mysql_fetch_array( $result ) ) : ?>
+        <?php while( $contact = mysql_fetch_array( $contacts ) ) : ?>
 
 
 
