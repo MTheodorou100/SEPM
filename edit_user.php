@@ -33,7 +33,7 @@
                 <th>Username</th>
                 <th>Password</th>
                 <th>Account Type</th>
-  <th>Delete</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
