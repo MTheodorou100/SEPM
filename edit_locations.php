@@ -3,12 +3,18 @@
 <body>
     <h1>Create a new Tour</h1>
   
-   <form action="tours.php" method="POST">
-
-Tour name: <input type="text" name="tourname" id="tourname" required>
+   <form action="editedlocations.php" method="POST">
+Exhibit name: <input type="text" name="Exhibit_name" id="Exhibit_name" required>
 <br/><br/>
-First location:  <select name="location" class="bl-select">
-
+X co-ordinate: <input type="number" name="x" id="x" minlength="1" required>
+<br/><br/>
+Y co-ordinate: <input type="number" name="y" id="y" minlength="1" required>
+<br/><br/>
+Description: <input type="text" name="Description" id="Description" required>
+<br/><br/>
+Minimum Duration: <input type="number" name="min_duration" id="min_duration" required>
+  <br><br/>
+     Location to be edited:  <select name="location" class="bl-select">
  <?php
 
    $servername = '35.244.97.104';
@@ -36,7 +42,7 @@ $array = array();
     echo " - Name: " . $row["exhibitname"]. "<br>";
     $array =$row["exhibitname"];
     ?>
-        <option value="<?php echo $row["exhibitname"];?>"><?php echo $row["exhibitname"];?></option>
+        <option name="editl" id="editl" value="<?php echo $row["exhibitname"];?>"><?php echo $row["exhibitname"];?></option>
 <?php
   }
 } else {
@@ -48,7 +54,7 @@ $array = array();
 
 </select>
      <br><br/>
-     <button type="submit" >Submit to register</button>
+     <button type="submit" >Update Locations</button>
 </form>
  
     
