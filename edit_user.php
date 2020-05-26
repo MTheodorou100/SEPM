@@ -20,7 +20,6 @@
     
 
     $array = array(); 
-
     if ($sql->num_rows > 0) {
         while($row = $sql->fetch_assoc()) {
             echo " <option value=\user1\">" . $row['username'] . "</option>";
@@ -31,5 +30,46 @@
     }
     ?>
     </select>
+    <?php
+
+    $contacts = mysql_query($conn, "SELECT * FROM users") or die( mysql_error() );
+    $result = mysql_query($contacts);
+    // If results
+    if( mysql_num_rows( $contacts ) > 0 )
+    ?>
+
+    <table id="user-list">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Account Type</th>
+  <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <?php while( $contact = mysql_fetch_array( $results ) ) : ?>
+
+
+
+            <tr>
+                <td class="userid"><?php echo $contact['idusers']; ?></td>
+                <td class="username"><?php echo $contact['username']; ?></td>
+                <td class="password"><?php echo $contact['password']; ?></td>
+                <td class="acctype"><?php echo $contact['acctype']; ?></td>
+                <td class="contact-delete">
+    <form action='delete.php?name="<?php echo $contact['username']; ?>"' method="post">
+        <input type="hidden" name="username" value="<?php echo $contact['username']; ?>">
+        <input type="submit" name="submit" value="Delete">
+    </form>
+</td>                
+            </tr>
+
+        <?php endwhile; ?>
+
+        </tbody>
+    </table>
 </body>
 </html> 
