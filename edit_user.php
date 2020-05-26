@@ -33,9 +33,8 @@
     </select>
     <?php
     $conn2 = new mysqli($servername, $username, $password, $dbname);
-    $contacts = mysqli_query($conn2, "SELECT * FROM users");
-   # $result = mysqli_query($contacts);
-    // If results
+    $contacts = mysqli_query($conn2, "SELECT * FROM users ORDER BY idusers ASC");
+  
     if( mysqli_num_rows( $contacts ) > 0 )
     ?>
 
@@ -51,7 +50,7 @@
         </thead>
         <tbody>
 
-        <?php while( $contact = mysql_fetch_array( $contacts ) ) : ?>
+        <?php while( $contact = mysqli_fetch_array( $contacts ) ) : ?>
 
 
 
