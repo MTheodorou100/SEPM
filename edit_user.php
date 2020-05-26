@@ -28,14 +28,15 @@
         } else {
           echo "0 results";
     }
+    $conn -> close();
     ?>
     </select>
     <?php
-
-    $contacts = mysql_query($conn, "SELECT * FROM users") or die( mysql_error() );
+    $conn2 = new mysqli($servername, $username, $password, $dbname);
+    $contacts = mysql_query($conn2, "SELECT * FROM users");
     $result = mysql_query($contacts);
     // If results
-    if( mysql_num_rows( $contacts ) > 0 )
+    if( mysql_num_rows( $result ) > 0 )
     ?>
 
     <table id="user-list">
@@ -50,7 +51,7 @@
         </thead>
         <tbody>
 
-        <?php while( $contact = mysql_fetch_array( $results ) ) : ?>
+        <?php while( $contact = mysql_fetch_array( $result ) ) : ?>
 
 
 
