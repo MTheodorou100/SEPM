@@ -1,13 +1,6 @@
 <html>
 <body>
     <h1>Edit a User</h1>
-    
-
-   Select User: <select name="users" class="dropbtn">
-
-   Select User: <select name="users" class="dropbtn">Users</select>
->>>>>>> Develop
-
     <?php
     $servername = '35.244.97.104';
     $dbname = 'SEPMdb';
@@ -24,17 +17,8 @@
     
 
     $array = array(); 
-    if ($sql->num_rows > 0) {
-        while($row = $sql->fetch_assoc()) {
-            echo " <option value=\user1\">" . $row['username'] . "</option>";
-            $array =$row["username"];
-          }
-        } else {
-          echo "0 results";
-    }
     $conn -> close();
     ?>
-    </select>
     <?php
     $conn2 = new mysqli($servername, $username, $password, $dbname);
     $contacts = mysqli_query($conn2, "SELECT * FROM users ORDER BY idusers ASC");
