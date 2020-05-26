@@ -2,7 +2,11 @@
 <body>
     <h1>Edit a User</h1>
     
+
    Select User: <select name="users" class="dropbtn">
+
+   Select User: <select name="users" class="dropbtn">Users</select>
+>>>>>>> Develop
 
     <?php
     $servername = '35.244.97.104';
