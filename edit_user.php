@@ -45,6 +45,7 @@
                 <th>Username</th>
                 <th>Password</th>
                 <th>Account Type</th>
+                <th>Edit</th>
   <th>Delete</th>
             </tr>
         </thead>
