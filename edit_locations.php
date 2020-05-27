@@ -56,6 +56,40 @@ $array = array();
      <br><br/>
      <button type="submit" >Update Locations</button>
 </form>
+  
+    <form action='delete_location.php' method="post">
+        Location to be deleted:  <select name="ex" class="bl-select">
+<?php
+      
+         $servername = '35.244.97.104';
+    $dbname = 'SEPMdb';
+    $username = 'root';
+    $password = null;
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+  die("Connection failed: " . $db->connect_error);
+}     
+
+$sql = "SELECT exhibitname FROM locations";
+$result = $conn->query($sql);  
+       if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo " - Name: " . $row["exhibitname"]. "<br>";
+    $array =$row["exhibitname"];
+    ?>
+        <option name="editl" id="editl" value="<?php echo $row["exhibitname"];?>"><?php echo $row["exhibitname"];?></option>
+<?php
+  }
+} else {
+  echo "0 results";
+} 
+   ?>
+      </select>
+        <input type="submit" name="submit" value="Delete">
+    </form>
  
     
 </body>
