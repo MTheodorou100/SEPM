@@ -15,7 +15,7 @@ if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }     
 
-$sql = "UPDATE tours SET tourname='$_POST[tourname]', xcord='$_POST[location]' WHERE tourname='$_POST[tour]';";
+$sql = "UPDATE tours SET tourname='$_POST[tourname]', tourlocation='$_POST[location]' WHERE tourname='$_POST[tour]';";
   
 if ($db->query($sql) === TRUE) {
 } else {
