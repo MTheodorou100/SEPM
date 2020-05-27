@@ -19,7 +19,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }     
 
-$sql = "SELECT tour FROM tours";
+$sql = "SELECT tourname FROM tours";
 $result = $conn->query($sql);  
   
 $array = array();  
