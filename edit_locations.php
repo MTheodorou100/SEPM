@@ -56,6 +56,11 @@ $array = array();
      <br><br/>
      <button type="submit" >Update Locations</button>
 </form>
+<button class="location-delete">
+    <form action='delete_location.php?name="<?php echo $row['exhibitname']; ?>"' method="post">
+        <input type="hidden" name="exhibitname" value="<?php echo $row['exhibitname']; ?>">
+        <input type="submit" name="submit" value="Delete">
+    </form>
  
     
 </body>
