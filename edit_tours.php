@@ -3,7 +3,7 @@
 <body>
     <h1>Edit new Tour</h1>
   
-   <form action="tours.php" method="POST">
+   <form action="editedtours.php" method="POST">
 Select Tour to modify: <select name="tour" id="tour" class="bl-select">
 	   
 	   <?php
