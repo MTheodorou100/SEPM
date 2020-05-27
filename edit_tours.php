@@ -91,12 +91,45 @@ $array = array();
      <br><br/>
      <button type="submit" >Modify Tour</button>
 </form>
+ 
 <br></br>
 <br></br>
-  <h2>Delete a Tour</h2>
+<br></br>
+  <h2>Delete a Location</h2>
 
     <form action='delete_tour.php' method="post">
         Location to be deleted:  <select name="xe" class="bl-select">
+<?php
+      
+         $servername = '35.244.97.104';
+    $dbname = 'SEPMdb';
+    $username = 'root';
+    $password = null;
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+  die("Connection failed: " . $db->connect_error);
+}     
+
+$sql = "SELECT tourname FROM tours";
+$result = $conn->query($sql);  
+       if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo " - Name: " . $row["tourname"]. "<br>";
+    $array =$row["tourname"];
+    ?>
+        <option name="editl" id="editl" value="<?php echo $row["tourname"];?>"><?php echo $row["tourname"];?></option>
+<?php
+  }
+} else {
+  echo "0 results";
+} 
+   ?>
+      </select>
+        <input type="submit" name="submit" value="Delete">
+    </form>
     
 </body>
 </html> 
