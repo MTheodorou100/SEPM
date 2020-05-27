@@ -1,7 +1,7 @@
 
 <html>
 <body>
-    <h1>Create a new Tour</h1>
+    <h1>Edit a Tour</h1>
   
    <form action="editedlocations.php" method="POST">
 Exhibit name: <input type="text" name="Exhibit_name" id="Exhibit_name" required>
@@ -56,7 +56,11 @@ $array = array();
      <br><br/>
      <button type="submit" >Update Locations</button>
 </form>
-  
+<br></br>
+<br></br>
+<br></br>
+  <h2>Delete a Location</h2>
+
     <form action='delete_location.php' method="post">
         Location to be deleted:  <select name="ex" class="bl-select">
 <?php
