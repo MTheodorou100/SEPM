@@ -49,6 +49,12 @@ Tour name: <input type="text" name="tourname" id="tourname" required>
 <br/><br/>
 First location:  <select name="location" class="bl-select">
 
+<br></br>
+<br></br>
+  <h2>Delete a Location</h2>
+
+    <form action='delete_tour.php' method="post">
+        Location to be deleted:  <select name="xe" class="bl-select">
  <?php
 
    $servername = '35.244.97.104';
