@@ -56,13 +56,15 @@ $array = array();
      <br><br/>
      <button type="submit" >Update Locations</button>
 </form>
-<button class="location-delete">
-    <form action='delete_location.php?name="<?php echo $row['exhibitname']; ?>"' method="post">
-        <input type="hidden" name="exhibitname" value="<?php echo $row['exhibitname']; ?>">
-        <input type="submit" name="submit" value="Delete">
-    </form>
- 
-    <?php endwhile; ?>
+
+<?php while( $locname = mysqli_fetch_array( $result ) ) : ?>
+  <button class="location-delete">
+      <form action='delete_location.php?name="<?php echo $locname['exhibitname']; ?>"' method="post">
+          <input type="hidden" name="exhibitname" value="<?php echo $locname['exhibitname']; ?>">
+          <input type="submit" name="submit" value="Delete">
+      </form>
+  </button>
+<?php endwhile; ?>
     
 </body>
 </html> 
