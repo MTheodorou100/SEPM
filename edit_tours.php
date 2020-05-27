@@ -49,12 +49,7 @@ Tour name: <input type="text" name="tourname" id="tourname" required>
 <br/><br/>
 First location:  <select name="location" class="bl-select">
 
-<br></br>
-<br></br>
-  <h2>Delete a Location</h2>
 
-    <form action='delete_tour.php' method="post">
-        Location to be deleted:  <select name="xe" class="bl-select">
  <?php
 
    $servername = '35.244.97.104';
@@ -96,7 +91,12 @@ $array = array();
      <br><br/>
      <button type="submit" >Modify Tour</button>
 </form>
- 
+<br></br>
+<br></br>
+  <h2>Delete a Tour</h2>
+
+    <form action='delete_tour.php' method="post">
+        Location to be deleted:  <select name="xe" class="bl-select">
     
 </body>
 </html> 
