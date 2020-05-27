@@ -1,7 +1,7 @@
 
 <html>
 <body>
-    <h1>Edit a Tour</h1>
+    <h1>Edit a Location</h1>
   
    <form action="editedlocations.php" method="POST">
 Exhibit name: <input type="text" name="Exhibit_name" id="Exhibit_name" required>
