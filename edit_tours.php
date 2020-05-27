@@ -5,6 +5,7 @@
   
    <form action="tours.php" method="POST">
 Select Tour to modify: <select name="tour" id="tour"></select>
+	   <br><br/>
 	   <?php
 
    $servername = '35.244.97.104';
