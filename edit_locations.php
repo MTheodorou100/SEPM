@@ -62,6 +62,7 @@ $array = array();
         <input type="submit" name="submit" value="Delete">
     </form>
  
+    <?php endwhile; ?>
     
 </body>
 </html> 
