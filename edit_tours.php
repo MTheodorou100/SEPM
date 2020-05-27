@@ -1,11 +1,11 @@
 
 <html>
 <body>
-    <h1>Create a new Tour</h1>
+    <h1>Edit new Tour</h1>
   
    <form action="tours.php" method="POST">
-Select Tour to modify: <select name="tour" id="tour"></select>
-	   <br><br/>
+Select Tour to modify: <select name="tour" id="tour" class="bl-select">
+	   
 	   <?php
 
    $servername = '35.244.97.104';
@@ -30,8 +30,8 @@ $array = array();
  if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo " - Name: " . $row["tourname"]. "<br>";
-    $array =$row["exhibitname"];
+   # echo " - Name: " . $row["tourname"]. "<br>";
+   # $array =$row["exhibitname"];
     ?>
         <option value="<?php echo $row["tourname"];?>"><?php echo $row["tourname"];?></option>
 <?php
@@ -40,6 +40,8 @@ $array = array();
   echo "0 results";
 } 
    ?>
+	   </select>
+	   <br><br/>
 	   
 	   
 	   
@@ -86,7 +88,7 @@ $array = array();
 
 </select>
      <br><br/>
-     <button type="submit" >Submit to register</button>
+     <button type="submit" >Modify Tour</button>
 </form>
  
     
