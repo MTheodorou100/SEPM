@@ -3,12 +3,12 @@
   include("config.php");
   extract($_POST);
   
-  if(isset($submit))
+  if(isset($_POST['submit']))
   {
-      $rs=mysqli_query($conn,"select * from users where username='$username' and password='$password'");
+      $rs=mysqli_query($conn,"SELECT * FROM users WHERE username='$username' AND password='$password'");
       if(mysqli_num_rows($rs)<1)
       {
-          $found="N";
+          echo "incorrect";
       }
       else
       {

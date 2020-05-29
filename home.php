@@ -6,16 +6,13 @@
    
    $user_check = $_SESSION['login'];
    
-   $ses_sql = mysqli_query($conn,"select username from user where username = '$user_check' ");
+   $ses_sql = mysqli_query($conn,"SELECT username FROM user WHERE username = '$user_check' ");
    
-   $row = mysqli_fetch_array($ses_sql, MYSQL_ASSOC);
+   $row = mysqli_fetch_assoc($ses_sql);
    
    $login_session = $row['username'];
-   if(!isset($_SESSION['login_user'])){
-    header("location:login.php");
-    echo ($login_session);
-    die();
- }
+   echo $login_session;
+
    
 ?>
 <body>
