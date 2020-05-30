@@ -2,25 +2,31 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="steeze.css">
+		<title>SEPM Register</title>
 	</head>
 	<body>
 
 		<header>
-			Tour Manager Web App Register Accounts
-		</header>
+            <a href="home.html" class="home">
+                Tour Manager Web App
+            </a>
+        </header>
+        <header>
+            Register Account
+        </header>
 
 		<div>
-			Register an Admins or Assistant account providing the following details:
+			Create an Admins or Assistant account providing the following details:
 		</div>
 
 		<form action="register.php" method="POST">
-			<div class="a1" style="margin-top: 20px;">
+			<div style="margin-top: 20px;">
 				Username: <input type="text" name="username" id="username" required>
 			</div>
-			<div class="a2" style="margin-top: 20px;">
+			<div style="margin-top: 20px;">
 				Password: <input type="password" name="password" id="password" minlength="6" required>
 			</div>
-			<div class="a3" style="margin-top: 20px;">
+			<div style="margin-top: 20px;">
 				<label>
 					Account Type:
 				</label>
@@ -33,7 +39,7 @@
 					</option>
 				</select>
 			</div>
-			<div class="a4" style="margin-top: 20px;">
+			<div style="margin-top: 20px;">
 				<button onclick=hashPassword() type="submit">
 					Submit to register
 				</button>
