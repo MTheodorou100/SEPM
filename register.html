@@ -2,7 +2,9 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="steeze.css">
-		<title>SEPM Register</title>
+		<title>
+			SEPM Register
+		</title>
 	</head>
 	<body>
 
@@ -20,13 +22,13 @@
 		</div>
 
 		<form action="register.php" method="POST">
-			<div style="margin-top: 20px;">
+			<div>
 				Username: <input type="text" name="username" id="username" required>
 			</div>
-			<div style="margin-top: 20px;">
+			<div>
 				Password: <input type="password" name="password" id="password" minlength="6" required>
 			</div>
-			<div style="margin-top: 20px;">
+			<div>
 				<label>
 					Account Type:
 				</label>
@@ -39,7 +41,7 @@
 					</option>
 				</select>
 			</div>
-			<div style="margin-top: 20px;">
+			<div>
 				<button onclick=hashPassword() type="submit">
 					Submit to register
 				</button>

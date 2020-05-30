@@ -17,26 +17,15 @@
 html
 {
     height: 100%;
-    /* background-image: linear-gradient(#6ab04c, #f6e58d); */
     background-image: linear-gradient(#95afc0, #c7ecee);
 }
 body 
 {
     color: white;
-    /* background-color:#6ab04c; */
-    /* background-image: linear-gradient(#6ab04c, white); */
-    /* height: 100%; */
     font-family: eurof55;
     margin: 0px;
-    /* margin-top: 15%; */
-    /* margin-bottom: 25%; */
     user-select: none;
 
-}
-
-.center 
-{
-    text-align: center;
 }
 
 div
