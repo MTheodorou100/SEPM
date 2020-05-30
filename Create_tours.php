@@ -2,7 +2,7 @@
 	<head>
 		<link rel="stylesheet" href="steeze.css">
         <title>
-            SEPM Index
+            SEPM Create Tours
         </title>
 	</head>
 	<body>
