@@ -149,11 +149,11 @@ button
     text-align: center;
     /* margin: 4px 2px; */
     cursor: pointer;
-    width: 50%;
+    /* width: 50%; */
     font-family: inherit;
     /* padding-top: 40%; */
     /* padding-bottom: 40%; */
-    height: 100px;
+    height: inherit;
     border-radius: inherit;
     font-size: inherit;
 }
