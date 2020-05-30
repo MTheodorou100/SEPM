@@ -1,25 +1,52 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<body>
+	<head>
+		<link rel="stylesheet" href="steeze.css">
+		<title>
+			SEPM Register
+		</title>
+	</head>
+	<body>
 
-<h1>Tour Manager Web App Register Accounts</h1>
-<p>Register Admins & Assistant Users providing the following details:</p>
- 
- <form action="register.php" method="POST">
+		<header>
+            <a href="home.html" class="home">
+                Tour Manager Web App
+            </a>
+        </header>
+        <header>
+            Register Account
+        </header>
 
-Username: <input type="text" name="username" id="username" required>
-<br/><br/>
-Password: <input type="password" name="password" id="password" minlength="6" required>
-<br/><br/>
-   <label>Account Type:</label>
-             <select id = "account" name="account">
-               <option value = "admin">Admin</option>
-               <option value = "assistant">Assistant User</option>
-             </select>
-  <br><br/>
-<button onclick=hashPassword() type="submit" >Submit to register</button>
-    <input type="hidden" name="hpassword" id="hpassword" minlength="6" required>
-</form>
- 
-</body>
+		<div>
+			Create an Admins or Assistant account providing the following details:
+		</div>
+
+		<form action="register.php" method="POST">
+			<div>
+				Username: <input type="text" name="username" id="username" required>
+			</div>
+			<div>
+				Password: <input type="password" name="password" id="password" minlength="6" required>
+			</div>
+			<div>
+				<label>
+					Account Type:
+				</label>
+				<select id = "account" name="account">
+					<option value = "admin">
+						Admin
+					</option>
+					<option value = "assistant">
+						Assistant User
+					</option>
+				</select>
+			</div>
+			<div>
+				<button onclick=hashPassword() type="submit">
+					Submit to register
+				</button>
+			</div>
+			<input type="hidden" name="hpassword" id="hpassword" minlength="6" required>
+		</form>
+	</body>
 </html> 
