@@ -10,8 +10,7 @@ Tour name: <input type="text" name="tourname" id="tourname" required>
 First location:  <select name="location" class="bl-select">
 
  <?php
-   
-   
+
    $servername = '35.244.97.104';
     $dbname = 'SEPMdb';
     $username = 'root';
