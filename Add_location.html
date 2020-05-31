@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
-<body>
-    <h1>Create a new Tour Location</h1>
- 
- <form action="location.php" method="POST">
+	<head>
+        <link rel="stylesheet" href="steeze.css">
+        <title>
+			SEPM Add Location
+		</title>
+    </head>
+	<body>
 
-Exhibit name: <input type="text" name="Exhibit_name" id="Exhibit_name" required>
-<br/><br/>
-X co-ordinate: <input type="number" name="x" id="x" minlength="1" required>
-<br/><br/>
-Y co-ordinate: <input type="number" name="y" id="y" minlength="1" required>
-<br/><br/>
-Description: <input type="text" name="Description" id="Description" required>
-<br/><br/>
-Minimum Duration: <input type="number" name="min_duration" id="min_duration" required>
-  <br><br/>
-<button type="submit" >Submit to register</button>
-</form>
-</body>
+		<header>
+            <a href="home.html" class="home">
+                Tour Manager Web App
+            </a>
+        </header>
+		<header>
+			Add Tour Location
+		</header>
+
+		<form action="location.php" method="POST">
+			<div>
+				Exhibit name: <input type="text" name="Exhibit_name" id="Exhibit_name" required>
+			</div>
+			<div>
+				X co-ordinate: <input type="number" name="x" id="x" minlength="1" required>
+			</div>
+			<div>
+				Y co-ordinate: <input type="number" name="y" id="y" minlength="1" required>
+			</div>
+			<div>
+				Description: <input type="text" name="Description" id="Description" required>
+			</div>
+			<div>
+				Minimum Duration: <input type="number" name="min_duration" id="min_duration" required>
+			</div>
+			<div>
+				<button type="submit" >Submit to register</button>
+			</div>
+		</form>
+	</body>
 </html> 

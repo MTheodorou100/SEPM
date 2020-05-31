@@ -1,0 +1,176 @@
+@font-face 
+{ 
+    font-family: monof; 
+    src: url('monof55.ttf'); 
+}
+@font-face
+{
+    font-family: eurof35;
+    src: url('eurof35.ttf')
+}
+@font-face
+{
+    font-family: eurof55;
+    src: url('eurof55.ttf');
+}
+
+html
+{
+    height: 100%;
+    background-image: linear-gradient(#95afc0, #c7ecee);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body 
+{
+    color: white;
+    font-family: eurof55;
+    margin: 0px;
+    user-select: none;
+
+}
+
+div
+{
+    background-color: #535c68;
+    padding: 0px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    font-size: 55px;
+    width: 50%;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border: 3px solid white;
+
+    margin-bottom: 20px;
+}
+
+header
+{
+    /* background-color:#6ab04c; */
+    font-size: 75px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.link
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    
+    user-select: none;
+    font-size: 50px;
+    color: white;
+    border: 3px solid white;
+
+    background-color: #686de0;
+}
+.link:hover
+{
+    text-decoration: none;
+    background-color: #4834d4;
+}
+.link:active
+{
+    text-decoration: none;
+}
+.link:link
+{
+    text-decoration: none;
+}
+.link:visited
+{
+    text-decoration: none;
+}
+
+button
+{
+    background-color: #686de0;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-family: inherit;
+    height: inherit;
+    border-radius: inherit;
+    font-size: inherit;
+    border: 3px solid white;
+}
+button:hover
+{
+    background-color: #4834d4;
+}
+
+a.home
+{
+    text-decoration: none;
+    color: white;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+table
+{
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border: 3px solid white;
+    border-radius: 20px;
+    user-select: text;
+    background-color: white;
+}
+
+thead
+{
+    font-size: 50px;
+    width: 100%;
+}
+
+tbody
+{
+    font-size: 40px;
+    width: 100%;
+}
+tr
+{
+    width: 100%;
+}
+th
+{
+    width: 16%;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #535c68;
+}
+td
+{
+    width: 16%;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #535c68;
+}
